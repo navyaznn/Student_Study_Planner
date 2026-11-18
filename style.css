@@ -1,0 +1,330 @@
+/* General Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fff5f8;
+    color: #38233f;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+
+header {
+    background-color: #f8dce8;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #63365c;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #493047;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #e75491;
+}
+
+/* Main Container */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+/* Welcome Section */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: linear-gradient(120deg, #f9d5e5, #fce9ef);
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+}
+
+.hero-text {
+    flex: 1;
+    text-align: center;
+}
+
+
+    /* Banner Image */
+.hero-image {
+    flex: 0 1 38%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 350px;
+    height: 240px;
+    object-fit: contain;
+}
+
+/* About Section - Study Books Image */
+.about-image {
+    display: block;
+    width: 180px;
+    max-width: 100%;
+    height: 130px;
+    object-fit: contain;
+    margin: 15px auto 0;
+}
+
+/* Study Timetable - Stationery Image */
+.stationery-image {
+    display: block;
+    width: 160px;
+    height: 130px;
+    object-fit: contain;
+    margin: 10px auto 20px;
+}
+
+/* Mobile Screen Styling */
+@media (max-width: 650px) {
+    .hero {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    .hero-image img {
+        max-height: 190px;
+    }
+}
+
+
+/* Cards */
+
+.card {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 16px;
+    border: 1px solid #f0cddd;
+    box-shadow: 0 4px 12px rgba(120, 60, 100, 0.07);
+}
+
+.card h2 {
+    color: #793d68;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+
+input,
+textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #e7bfd2;
+    border-radius: 9px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #dc78a7;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Buttons */
+
+button {
+    background-color: #e985b2;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 15px;
+    margin: 5px 0;
+}
+
+button:hover {
+    background-color: #c95e91;
+}
+
+/* Task List */
+
+#taskList {
+    list-style: none;
+    margin-top: 18px;
+}
+
+#taskList li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: space-between;
+    padding: 12px;
+    border-bottom: 1px solid #f3dce7;
+}
+
+.task-label {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+#taskList li.completed .task-label {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.task-check {
+    width: 18px;
+    height: 18px;
+    accent-color: #d96b9d;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.delete-btn {
+    background-color: #b75c77;
+    padding: 7px 12px;
+}
+
+/* Timetable */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #f8dce8;
+    color: #693d60;
+}
+
+th, td {
+    padding: 13px;
+    text-align: left;
+    border: 1px solid #edc9da;
+}
+
+tr:hover {
+    background-color: #fff4f8;
+}
+
+/* Progress Bar */
+
+.progress-bar {
+    width: 100%;
+    height: 22px;
+    background-color: #f3dce7;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+#progressFill {
+    height: 100%;
+    width: 0%;
+    background-color: #e985b2;
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+
+#progressText {
+    font-weight: bold;
+    color: #a64d79;
+}
+
+/* Feedback */
+
+#feedbackMessage {
+    margin-top: 10px;
+    color: #8c4c78;
+    font-weight: bold;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    background-color: #f8dce8;
+    color: #63365c;
+    padding: 22px;
+    margin-top: 30px;
+}
+
+/* Mobile Responsive Design */
+
+@media (max-width: 650px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    .container {
+        width: 94%;
+    }
+
+    .card {
+        padding: 17px;
+    }
+
+    th, td {
+        padding: 9px;
+        font-size: 13px;
+    }
+}
+/* Editable Timetable Styling */
+
+#studyTable td {
+    cursor: text;
+}
+
+#studyTable td:focus {
+    outline: 2px solid #e985b2;
+    background-color: #fff0f6;
+}
